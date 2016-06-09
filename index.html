@@ -3,9 +3,27 @@ layout: default
 ---
 <br>
         <br>
+
+<div class="container">
+
 <div class="row">
-	<div class="col-sm-3 col-sm-offset-3 col-md-3 col-md-offset-7 form">
-            <h3><svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>Entre em contato</h3>
+    <div class="col-sm-8">        
+        <h2>Nossos Produtos</h2> 
+
+            <div id="team-carousel">
+                {% for member in site.data.team %}
+                    <div class="expandable-box">
+                        <div class="expandable-box-top">
+                            <img src="{{ site.baseurl }}/img/{{ member.image }}" alt="{{ member.name }}">
+                            <h4>{{ member.name }}</h4>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>            
+    </div>
+    <a href="http://i9gestor.com.br/formi9responsivo/?r=NTczMTc=&amp;origem=formi9Anderson" class="btn btn-primary btn-block visible-xs">Cadastrar</a>
+	<div class="col-sm-4 form">
+            <h3><svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>&nbsp;Entre em contato</h3>
             <form action="https://getsimpleform.com/messages?form_api_token=963d03888d5456c76d1a35ee7a0c46c9" method="post">
                 <div class="form-field">
                     <input name="name" type="text" placeholder="Seu nome" required>
@@ -24,8 +42,11 @@ layout: default
         </div>
 
 </div>
-        <br>
-        <br>
+  <div class="row">
+    <div class="col-sm-12">
+    
+    </div>
+</div>
         
 
 <!-- Start 3 columns -->
@@ -74,45 +95,7 @@ layout: default
                 </p>
                         Se você vender apenas 1 perfume por dia , no final do mês você terá um lucro de 1.470 reais.
                     </p>
-                <p>
-                        A i9life tem mudado a vida de milhares de pessoas no Brasil e será um prazer também ter você nessa família que a cada dia cresce mais.
-                </p>
-                <br />
-                <div class="media">
-                    <div class="media-left">
-                        <div class="boxed-icon">
-                            <svg class="icon icon-heart"><use xlink:href="#icon-star"></use></svg>
-                        </div>
-                    </div>
-                    <div class="media-body">
-                        <p> Entre os nossos produtos podemos destacar nossos perfumes de 50 ml com uma embalagem única e atrativa sem falar na qualidade da essencia e fixação! 
-
-                        </p>
-                    </div>
-                </div>
-
-                <div class="media">
-                    <div class="media-left">
-                        <div class="boxed-icon">
-                            <svg class="icon icon-medkit"><use xlink:href="#icon-star"></use></svg>
-                        </div>
-                    </div>
-                    <div class="media-body">
-                        <p>Ainda temos entre as novidades perfumes em aerosol de 100ml únicos no Brasil! 
-                        </p>
-                    </div>
-                </div>
-
-                <div class="media">
-                    <div class="media-left">
-                        <div class="boxed-icon">
-                            <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
-                        </div>
-                    </div>
-                    <div class="media-body">
-                        <p>Entre os nutraceuticos destacam: Goji ( cápsulas que absorvem a gordura do alimento), ômega 3, Detox tea( Cha que auxilia a diminuir a retenção de líquidos e celulite), shakes para controle de peso entre outros! DETALHE: todos com 100% de lucro!!</p>
-                    </div>
-                </div>
+                
             </div>
             <div class="col-sm-6">
                 <img src="img/about.jpg" alt="...">
@@ -142,20 +125,6 @@ layout: default
 </div>
 <!-- End Treatments -->
 
-<!-- Start Our team -->
-<div id="team" class="team"> 
-    <h2 class="section-title">Nossos Produtos</h2> 
-    <div id="team-carousel">
-    {% for member in site.data.team %}
-        <div class="expandable-box">
-            <div class="expandable-box-top">
-                <img src="{{ site.baseurl }}/img/{{ member.image }}" alt="{{ member.name }}">
-                <h4>{{ member.name }}</h4>
-            </div>
-        </div>
-    {% endfor %}
-    </div>
+
+
 </div>
-<!-- End Our team -->
-
-
