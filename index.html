@@ -14,9 +14,19 @@ layout: default
     </div>
 </div>
  -->
+ <!--
+ <div class="row">
 
+    <div class="col-sm-12">
+        {% for my_page in site.pages %}
+          {% if my_page.title %}
+          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+          {% endif %}
+        {% endfor %}
+    </div>
+</div>
  <br>
-        <br>
+        <br> -->
 <div class="row">
     <div class="col-sm-6 form">
             <h3><svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>&nbsp;Entre em contato</h3>

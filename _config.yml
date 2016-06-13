@@ -47,6 +47,8 @@ copyright: © 2016 i9life | Revendedor Oficial
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+permalink: /:title/
 
 exclude: [
     package.json,
