@@ -50,7 +50,7 @@ layout: default
 
 
 <!-- Start About -->
-<div id="about" class="about">
+<div id="sobre" class="about">
     <div class="container-fluid">
         <h2 class="section-title">Sobre a i9life</h2>
 
@@ -81,24 +81,30 @@ layout: default
 </div>
 <!-- End About -->
 
-<!-- Início Produtos -->
-<div id="team" class="team"> 
-    <h2 class="section-title">Produtos</h2> 
-    <div id="team-carousel">
+
+<!-- Start Gallery -->
+<div id="produtos" class="gallery">
+        
+    <h2 class="section-title">Nossos Produtos</h2>
+
     {% for produto in site.data.produtos %}
-        <div class="expandable-box">
+        <a href="{{ site.baseurl }}/img/gallery/large/{{ produto.image }}" class="gallery-item expandable-box image-link">
             <div class="expandable-box-top">
                 <img src="{{ site.baseurl }}/img/{{ produto.image }}" alt="{{ produto.name }}">
                 <h4>{{ produto.name }}</h4>
-            </div>            
-        </div>
+            </div>
+            <div class="expandable-box-bottom">
+                <span><svg class="icon icon-chain"><use xlink:href="#icon-chain"></use></svg></span>
+            </div>
+        </a>
     {% endfor %}
-    </div>
+
 </div>
-<!-- Fim Produtos -->
+<!-- End Gallery -->
+
 
 <!-- Start Treatments -->
-<div id="treatments" class="treatments">
+<div id="bonus" class="treatments">
     <div class="container-fluid">
         <h2 class="section-title">Bônus da i9life</h2>
 
@@ -116,6 +122,10 @@ layout: default
     </div>
 </div>
 <!-- End Treatments -->
+
+
+
+
 
 <script>
 
