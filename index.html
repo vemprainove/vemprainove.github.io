@@ -46,6 +46,9 @@ layout: default
 </div>
 <!-- End 3 columns -->
 
+
+
+
 <!-- Start About -->
 <div id="about" class="about">
     <div class="container-fluid">
@@ -77,6 +80,22 @@ layout: default
     </div>
 </div>
 <!-- End About -->
+
+<!-- Início Produtos -->
+<div id="team" class="team"> 
+    <h2 class="section-title">Produtos</h2> 
+    <div id="team-carousel">
+    {% for produto in site.data.produtos %}
+        <div class="expandable-box">
+            <div class="expandable-box-top">
+                <img src="{{ site.baseurl }}/img/{{ produto.image }}" alt="{{ produto.name }}">
+                <h4>{{ produto.name }}</h4>
+            </div>            
+        </div>
+    {% endfor %}
+    </div>
+</div>
+<!-- Fim Produtos -->
 
 <!-- Start Treatments -->
 <div id="treatments" class="treatments">
