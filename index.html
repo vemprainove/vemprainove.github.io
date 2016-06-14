@@ -2,48 +2,99 @@
 layout: default
 ---
 <br>
-        <br>
+<br>
 
 <div class="container">
 
+    <div class="row">
+        <div class="col-sm-6 form">
+            <h3>
+                <svg class="icon icon-envelope-o">
+                    <use xlink:href="#icon-envelope-o"></use></svg>&nbsp;Faça seu cadastro</h3>
+            <form action="https://getsimpleform.com/messages?form_api_token=963d03888d5456c76d1a35ee7a0c46c9" method="post"  id="form_gestor">
+                <div class="form-group">
+                <label for="nome">Nome Completo: <b style="color: red">*</b></label>
+                <input id="nome" class="form-control" type="text" name="nome" value="" data-validate="require" placeholder="Digite seu nome completo" required />
+                </div>
 
-<!--
-<div class="row">
-    <div class="col-sm-5">             
-            <iframe src="http://i9gestor.com.br/formi9responsivo/?r=NTczMTc=&amp;origem=formi9Anderson" style="width:100%; height:750px; border:0; margin:0; padding:0;"></iframe>
-    </div>
-</div>
- -->
- <!--
- <div class="row">
+                <div class="form-group">
+                <label for="data">Nascimento: <b style="color: red">*</b></label>
+                <input id="data" class="form-control" type="text" name="dtNascimento" value="" data-validate="require" placeholder="xx/xx/xxxx" required />
+                </div>
 
-    <div class="col-sm-12">
-        {% for my_page in site.pages %}
-          {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          {% endif %}
-        {% endfor %}
-    </div>
-</div>
- <br>
-        <br> -->
-<div class="row">
-    <div class="col-sm-6 form">
-            <h3><svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>&nbsp;Entre em contato</h3>
-            <form action="https://getsimpleform.com/messages?form_api_token=963d03888d5456c76d1a35ee7a0c46c9" method="post">
-                <div class="form-field">
-                    <input name="name" type="text" placeholder="Seu nome" required>
+                <div class="form-group">
+                <label for="sexo">Sexo: <b style="color: red">*</b></label>
+                <select name="sexo" id="sexo" class="form-control" data-validate="require" required>
+                    <option value="" selected="selected"></option>
+                    <option value="m">Masculino</option>
+                    <option value="f">Feminino</option>
+                </select>
                 </div>
-                <div class="form-field">
-                    <input name="phone" type="tel" placeholder="Celular, com DDD" required>
+
+                <div class="form-group">
+                <label for="cpf">CPF: <b style="color: red">*</b></label>
+                <input id="cpf" class="form-control" type="text" name="cpf" value="" data-validate="require" placeholder="Digite seu CPF" required />
                 </div>
-                <div class="form-field">
-                    <input name="email" type="email" placeholder="Email" required>
+                    
+                <div class="form-group">
+                <label for="celular">Celular: <b style="color: red">*</b></label>
+                <input id="celular" class="form-control" type="text" name="celular" value="" data-validate="require" placeholder="Digite seu celular" required />
                 </div>
-                <div class="form-field">
-                    <textarea name="comments" placeholder="Mensagem" required></textarea>
+
+                <div class="form-group">
+                <label for="email" c>E-mail: <b style="color: red">*</b></label>
+                <input id="email" class="form-control" type="email" name="email" id="email" value="" data-validate="required" placeholder="Digite seu e-mail" required />
                 </div>
-                <input type="submit" class="btn btn-default" value="Enviar">
+                
+                <div class="form-group">
+                <label for="email_confirmar">Repita Email: <b style="color: red">*</b></label>
+                <input id="email_confirmar" class="form-control" type="email" name="email_confirmar" value="" data-validate="required,equalTo[#email]" placeholder="Repita seu e-mail" required />
+                </div>
+
+                <div class="form-group">
+                <label for="cidade">Cidade: <b style="color: red">*</b></label>
+                <input id="cidade" class="form-control" type="text" name="cidade" value="" data-validate="require" placeholder="Digite sua cidade" required />
+                </div>
+                
+                <div class="form-group">
+                <label for="estado">Estado: <b style="color: red">*</b></label>
+                <select name="uf" id="estado" class="col-sm-3 form-control" required>
+                    <option value="" selected="selected">--</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+                </div>
+                <div class="form-group">
+                <br>
+                <br><span></span>
+                <input type="submit" class="btn  btn-default" value="Enviar" />
+                </div>
+            
             </form>
         </div>
         <div class="col-sm-6">
@@ -51,7 +102,8 @@ layout: default
             <div class="media">
                 <div class="media-left">
                     <div class="boxed-icon">
-                        <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="icon icon-star">
+                            <use xlink:href="#icon-star"></use></svg>
                     </div>
                 </div>
                 <div class="media-body">
@@ -61,7 +113,8 @@ layout: default
             <div class="media">
                 <div class="media-left">
                     <div class="boxed-icon">
-                        <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="icon icon-star">
+                            <use xlink:href="#icon-star"></use></svg>
                     </div>
                 </div>
                 <div class="media-body">
@@ -71,7 +124,8 @@ layout: default
             <div class="media">
                 <div class="media-left">
                     <div class="boxed-icon">
-                        <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="icon icon-star">
+                            <use xlink:href="#icon-star"></use></svg>
                     </div>
                 </div>
                 <div class="media-body">
@@ -81,7 +135,8 @@ layout: default
             <div class="media">
                 <div class="media-left">
                     <div class="boxed-icon">
-                        <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="icon icon-star">
+                            <use xlink:href="#icon-star"></use></svg>
                     </div>
                 </div>
                 <div class="media-body">
@@ -91,27 +146,30 @@ layout: default
             <div class="media">
                 <div class="media-left">
                     <div class="boxed-icon">
-                        <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="icon icon-star">
+                            <use xlink:href="#icon-star"></use></svg>
                     </div>
                 </div>
                 <div class="media-body">
                     <p>Horários flexíveis</p>
                 </div>
-            </div>                                                
+            </div>
             <div class="media">
                 <div class="media-left">
                     <div class="boxed-icon">
-                        <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="icon icon-star">
+                            <use xlink:href="#icon-star"></use></svg>
                     </div>
                 </div>
                 <div class="media-body">
                     <p>Tenha reconhecimento</p>
                 </div>
-            </div>            
+            </div>
             <div class="media">
                 <div class="media-left">
                     <div class="boxed-icon">
-                        <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="icon icon-star">
+                            <use xlink:href="#icon-star"></use></svg>
                     </div>
                 </div>
                 <div class="media-body">
@@ -121,7 +179,8 @@ layout: default
             <div class="media">
                 <div class="media-left">
                     <div class="boxed-icon">
-                        <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="icon icon-star">
+                            <use xlink:href="#icon-star"></use></svg>
                     </div>
                 </div>
                 <div class="media-body">
@@ -131,134 +190,144 @@ layout: default
             <div class="media">
                 <div class="media-left">
                     <div class="boxed-icon">
-                        <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                        <svg class="icon icon-star">
+                            <use xlink:href="#icon-star"></use></svg>
                     </div>
                 </div>
                 <div class="media-body">
                     <p>Ganhe muito dinheiro fazendo o que gosta</p>
                 </div>
-            </div>                                    
+            </div>
         </div>
-</div>
-<br>
-<br>
-
-<!-- Start 3 columns -->
-<div class="three-shade-col">
-    <div class="col-sm-4">
-        <svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>
-        <h3>Entre em contato</h3>
-        <ul>
-            {% if site.contact.phone %}<li><strong>Celular:</strong> {{ site.contact.phone }}</li>{% endif %}            
-            {% if site.contact.email %}<li><strong>E-mail:</strong> {{ site.contact.email }}</li>{% endif %}
-        </ul>
     </div>
-    <div class="col-sm-4">
-     <p>
-         <strong>Sede i9:</strong> R. Antônio Soares, 329 – Jardim Paulistano
+    <br>
+    <br>
+
+    <!-- Start 3 columns -->
+    <div class="three-shade-col">
+        <div class="col-sm-4">
+            <svg class="icon icon-envelope-o">
+                <use xlink:href="#icon-envelope-o"></use></svg>
+            <h3>Entre em contato</h3>
+            <ul>
+                {% if site.contact.phone %}<li><strong>Celular:</strong> {{ site.contact.phone }}</li>
+                {% endif %}            
+            {% if site.contact.email %}<li><strong>E-mail:</strong> {{ site.contact.email }}</li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="col-sm-4">
+            <p>
+                <strong>Sede i9:</strong> R. Antônio Soares, 329 – Jardim Paulistano
          Sorocaba/SP CEP:18040-570
          <br>
-         <strong>Plataforma i9:</strong> Rua Dinamarca, 133 – Jardim Europa
+                <strong>Plataforma i9:</strong> Rua Dinamarca, 133 – Jardim Europa
          Sorocaba/SP CEP: 04017-030
          <br>
-         <strong>CNPJ:</strong> 20.706.374/0001-34
-     </p>
-        
-    </div>
-    <div class="col-sm-4">
-        <svg class="icon icon-map-marker"><use xlink:href="#icon-map-marker"></use></svg>
-        <h3>Localização</h3>
+                <strong>CNPJ:</strong> 20.706.374/0001-34
+            </p>
+
+        </div>
+        <div class="col-sm-4">
+            <svg class="icon icon-map-marker">
+                <use xlink:href="#icon-map-marker"></use></svg>
+            <h3>Localização</h3>
             <p>
                 {{ site.contact.address }}
             </p>
+        </div>
     </div>
-</div>
-<!-- End 3 columns -->
+    <!-- End 3 columns -->
 
 
 
 
-<!-- Start About -->
-<div id="sobre" class="about">
-    <div class="container-fluid">
-        <h2 class="section-title">Sobre a i9life</h2>
+    <!-- Start About -->
+    <div id="sobre" class="about">
+        <div class="container-fluid">
+            <h2 class="section-title">Sobre a i9life</h2>
 
-        <div class="row">
-            <div class="col-sm-6">
-                <h3>A Empresa</h3>
-                <br />
-                <p>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>A Empresa</h3>
+                    <br />
+                    <p>
                         A i9life é uma empresa 100% brasileira e faz parte de um grupo que está há mais de 20 anos no mercado, a I9 Bussines. Nossa atuação está voltada para área de perfumaria e nutraceuticos. 
 
-                </p>
-                <p>
+                    </p>
+                    <p>
                         Além de produtos acessíveis e de fácil aceitação de mercado temos um plano de carreira super agressivo! A pontuação no plano binário é acumulativo o que nos permite os benefícios de conquistar os prêmios oferecidos pela empresa, a única questão será: Quando? Pois você vai chegar lá! É apenas questão de tempo!
-                </p>
-                <p>
+                    </p>
+                    <p>
                         Após a compra de qualquer um dos kits oferecidos pela empresa você compra cada perfume por 49 reais e vende por 98 reais. 100% de lucro.
 
-                </p>
-                        Se você vender apenas 1 perfume por dia , no final do mês você terá um lucro de 1.470 reais.
+                    </p>
+                    Se você vender apenas 1 perfume por dia , no final do mês você terá um lucro de 1.470 reais.
                     </p>
                 
-            </div>
-            <div class="col-sm-6">
-                <img src="img/about.jpg" alt="...">
+                </div>
+                <div class="col-sm-6">
+                    <img src="img/about.jpg" alt="...">
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- End About -->
+    <!-- End About -->
 
 
-<!-- Start Gallery -->
-<div id="produtos" class="gallery">
-        
-    <h2 class="section-title">Nossos Produtos</h2>
+    <!-- Start Gallery -->
+    <div id="produtos" class="gallery">
 
-    {% for produto in site.data.produtos %}
+        <h2 class="section-title">Nossos Produtos</h2>
+
+        {% for produto in site.data.produtos %}
         <a href="{{ site.baseurl }}/img/gallery/large/{{ produto.image }}" class="gallery-item expandable-box image-link">
             <div class="expandable-box-top">
                 <img src="{{ site.baseurl }}/img/{{ produto.image }}" alt="{{ produto.name }}">
                 <h4>{{ produto.name }}</h4>
             </div>
             <div class="expandable-box-bottom">
-                <span><svg class="icon icon-chain"><use xlink:href="#icon-chain"></use></svg></span>
+                <span>
+                    <svg class="icon icon-chain">
+                        <use xlink:href="#icon-chain"></use></svg></span>
             </div>
         </a>
-    {% endfor %}
+        {% endfor %}
 
-</div>
-<!-- End Gallery -->
+    </div>
+    <!-- End Gallery -->
 
 
-<!-- Start Treatments -->
-<div id="bonus" class="treatments">
-    <div class="container-fluid">
-        <h2 class="section-title">Bônus da i9life</h2>
+    <!-- Start Treatments -->
+    <div id="bonus" class="treatments">
+        <div class="container-fluid">
+            <h2 class="section-title">Bônus da i9life</h2>
 
-        <div class="row">
-            {% for treatment in site.data.treatments %}
+            <div class="row">
+                {% for treatment in site.data.treatments %}
                 <div class="col-sm-6 col-md-4">
                     <div class="icon-box">
-                        <svg class="icon {{ treatment.icon }}"><use xlink:href="#{{ treatment.icon }}"></use></svg>
+                        <svg class="icon {{ treatment.icon }}">
+                            <use xlink:href="#{{ treatment.icon }}"></use></svg>
                         <h4>{{ treatment.title }}</h4>
                         <p>{{ treatment.description }}</p>
                     </div>
                 </div>
-            {% endfor %}
+                {% endfor %}
+            </div>
         </div>
     </div>
-</div>
-<!-- End Treatments -->
+    <!-- End Treatments -->
 
 
 
 
 
-<script>
-
-</script>
+    <script>
+        $(function() {
+            alert('ok');
+        });
+    </script>
 
 
 </div>
